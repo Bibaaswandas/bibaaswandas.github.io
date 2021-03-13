@@ -1,3 +1,4 @@
+console.log('js is there')
 $(document).ready(function(){
     $('.slider').slick({
         arrows:false,
