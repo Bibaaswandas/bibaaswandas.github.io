@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <title>Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
         <link rel="stylesheet" type = "text/css" href="css/portfolio.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
@@ -14,12 +15,12 @@
         <header>
             <div class="container">
 
-            <nav class="flex items-center justify-between">
+            <nav class="animate__animated animate__slideInDown flex items-center justify-between">
                 <div class = "left flex items-center">
                     <div class = "branding">
                         <a href="#hero"><img src="images/logo.svg" alt="logo"></a>
                     </div>
-                    <div>
+                    <div class="navbtn">
                         <a href="#art">Art</a>
                         <a href="#buttonnice">About</a>
                         <a href="#serv">Services</a>
@@ -35,15 +36,15 @@
                 </div>
             </nav>   
             <div id = "hero" class="hero flex items-center justify-between">
-                <div class="left flex-1 flex justify-center">
+                <div class="animate__animated animate__slideInLeft left flex-1 flex justify-center">
                     <img src="images/man.png" height = "700px" alt="man">
                 </div>
-                <div class="right flex-1">
+                <div class="animate__animated animate__slideInRight right flex-1">
                     <div class="name">
                         <h6>Jonathan Vics</h6>
                     </div>
                     
-                    <div class="title">
+                    <div class="title firstheading">
                         <h1>I'm a Creative <span>Designer</span></h1>
                     </div>
                     
@@ -62,7 +63,7 @@
 
         <section  id = "art" class="art">
             <div class="container">
-                <h1 class="section-heading"><span>Our</span> Art</h1>
+                <h1 class="section-heading title"><span>Our</span> Art</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
                 <div class="sliderart">
                     <div class="slideart">
@@ -105,7 +106,7 @@
 <section id = "buttonnice" class="about">
     <div class="container flex items-center justify-between">
         <div class="flex-1">
-            <h1>About <span>Me</span></h1>
+            <h1 class="title">About <span>Me</span></h1>
             <h3>Hello! I'm Jonathan Vics</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et turpis dapibus velit posuere molestie maximus nec sapien. Donec placerat pharetra nisl nec pellentesque. Nam nulla lectus, finibus non accumsan et, consectetur ut ex. Phasellus tincidunt malesuada dictum. Morbi ut augue a nunc mattis sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et turpis </p>
             <div class="social flex items-center justify-between">
@@ -141,10 +142,11 @@
 
 <section id = "serv" class="services">
     <div class="container">
-        <h1 class="section-heading"><span>Our</span> Services</h1>
+        <h1 class="title section-heading"><span>Our</span> Services</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
         <div class="cardwrapper">
-            <div class="card">
+            
+            <div class="card serv moveleft">
                 <div class="imgcard1">
                     <img src="images/icons8-drawing-100.png" alt="buibui">
                 </div>
@@ -152,7 +154,7 @@
                 <h2>Graphic Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
             </div>
-            <div class="card">
+            <div class="card serv moveleft2">
                 <div class="imgcard1">
                     <img src="images/web.png" alt="buibui">
                 </div>
@@ -161,7 +163,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
             </div>
             
-            <div class="card">
+            <div class="card serv moveleft3">
                 <div class="imgcard1">
                     <img src="images/icons8-business-100.png" alt="buibui">
                 </div>
@@ -169,7 +171,7 @@
                 <h2>Graphic Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
             </div>
-            <div class="card">
+            <div class="card serv moveright">
                 <div class="imgcard1">
                     <img src="images/icons8-monitor-100.png" alt="buibui">
                 </div>
@@ -177,7 +179,7 @@
                 <h2>Graphic Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
             </div>
-            <div class="card">
+            <div class="card serv moveright2">
                 <div class="imgcard1">
                     <img src="images/icons8-video-100.png" alt="buibui">
                 </div>
@@ -185,7 +187,7 @@
                 <h2>Graphic Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
             </div>
-            <div class="card">
+            <div class="card serv moveright3">
                 <div class="imgcard1">
                     <img src="images/icons8-iphone-60.png" alt="buibui">
                 </div>
@@ -198,14 +200,14 @@
 </section>
 
 <section id = "free" class="freelancer">
-    <h1>I am available for <span>FreeLancing</span></h1>
+    <h1 class="title">I am available for <span>FreeLancing</span></h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
     <a href="Demo CV.txt" download="download"><button class="btn btn-primary">Download CV</button></a>
 </section>
 
 <section id = "rev" class="reviews">
     <div class="container">
-        <h1 class="section-heading"><span>Our</span> Clients</h1>
+        <h1 class="title section-heading"><span>Our</span> Clients</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
         <div class="slider">
             <div class="slide">
@@ -237,7 +239,7 @@
 
 <section id = "wor" class="work">
     <div class="container">
-        <h1 class="section-heading"><span>Our</span> Works</h1>
+        <h1 class="title section-heading"><span>Our</span> Works</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur adipiscing elit.</p>
    
         <div class="cardwrapper">
@@ -299,11 +301,11 @@
 
 <section id = "blo" class="blog">
     <div class="container">
-        <h1 class="section-heading"><span>Our </span>Blog</h1>
+        <h1 class="title section-heading"><span>Our </span>Blog</h1>
         <p>The international decade for action on water for life by united nations general assembly was declared on *
         </p>
         <div class="cardwrapper">
-            <div class="card">
+            <div class="card blo">
                 <div class="img-wrapper">
                     <img src="images/article-ph-1.png" alt="">
                 </div>
@@ -316,7 +318,7 @@
                     <a href="#" class="read">Read More</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card blo">
                 <div class="img-wrapper">
                     <img src="images/article-ph-2.png" alt="">
                 </div>
@@ -328,7 +330,7 @@
                     <a href="#" class="read">Read More</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card blo">
                 <div class="img-wrapper">
                     <img src="images/article-ph-3.png" alt="">
                 </div>
@@ -347,7 +349,7 @@
 
 <section id = "con" class = "con">
     <div class="container">
-        <h1 class="section-heading">Contact <span>Us</span></h1>
+        <h1 class="title section-heading">Contact <span>Us</span></h1>
         <p>Response submitted and assignment marked as done.
             </p>
             <div class="cardwrapper">
@@ -367,15 +369,17 @@
                     <a href="https://www.google.com/maps/dir/21.9724458,87.5882373/3112+Westfall+Ave,+Merced,+CA+95341,+USA/@1.8181553,76.7497916,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x80914345bbc3ff67:0x2bea524b2882237c!2m2!1d-120.4507538!2d37.2865774"><h6>3112  Westfall Avenue, California</h6></a>
                 </div>
             </div>
-            <div class="input-wrap">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-
-            </div>
-            <div class="input-wrap-2">
-               <input type="text" placeholder="Your Name"> 
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            </div>
+            <form action="">
+                <div class="input-wrap">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+    
+                </div>
+                <div class="input-wrap-2">
+                   <input type="text" placeholder="Your Name"> 
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                </div>
+            </form>
             <div class="btn-wrap">
                 <button class="btn btn-primary last">Send Message</button>
             </div>

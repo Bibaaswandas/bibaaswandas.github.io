@@ -587,6 +587,37 @@ section.blog .cardwrapper .card .card-content a:hover{
 .lastone span{
     color: var(--primary);
 } 
+div.animate__slideInRight{
+    animation-duration: 1.5s;
+}
+.title{
+    transition: all 0.3s ease;
+}
+.title:hover{
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+.animate__fadeIn{
+    animation-duration: 1.5s;
+}
+.moveleft{
+    animation-delay: 1.75s;
+}
+.moveleft2{
+    animation-delay: 1.75s;
+}
+.moveleft3{
+    animation-delay: 1.75s;
+}
+.moveright{
+    animation-delay: 1.75s;
+}
+.moveright2{
+    animation-delay: 1.75s;
+}
+.moveright3{
+    animation-delay: 1.75s;
+}
 section.con .cardwrapper{
     margin-top: -2rem;
     display: grid;
@@ -616,4 +647,34 @@ section.con .cardwrapper .card h6{
 }
 section.con .cardwrapper{
     margin-bottom: 3rem;
+}
+section.con .input-wrap{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+section.con .input-wrap-2{
+    display: flex;
+    flex-direction: column;
+}
+section.con input{
+    padding: 0.5rem;
+    border: 1px solid var(--bui);
+    background: var(--light);
+    font-size: 1rem;
+}
+section.con .input-wrap-2 input{
+    margin-bottom: 2rem;
+    border: 1px solid var(--bui);
+    background: var(--light);
+    font-size: 1rem;
+}
+section.con .input-wrap-2 textarea{
+    padding: 0.5rem;
+    border: 1px solid var(--bui);
+    background: var(--light);
+    outline: none;
+    margin-bottom: 2rem;
+    font-size: 1rem;
 }
