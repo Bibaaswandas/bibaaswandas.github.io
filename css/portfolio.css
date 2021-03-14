@@ -660,21 +660,60 @@ section.con .input-wrap-2{
 }
 section.con input{
     padding: 0.5rem;
-    border: 1px solid var(--bui);
+    border: 5px solid var(--bui);
     background: var(--light);
     font-size: 1rem;
+    outline: none;
 }
 section.con .input-wrap-2 input{
     margin-bottom: 2rem;
-    border: 1px solid var(--bui);
+    border: 5px solid var(--bui);
     background: var(--light);
     font-size: 1rem;
+    outline: none;
 }
 section.con .input-wrap-2 textarea{
     padding: 0.5rem;
-    border: 1px solid var(--bui);
+    border: 5px solid var(--bui);
     background: var(--light);
     outline: none;
     margin-bottom: 2rem;
     font-size: 1rem;
+}
+section.con .btn-wrapper{
+    text-align: center;
+}
+footer{
+    background: black;
+    text-align: center;
+    padding: 3rem 0;
+}
+.footerface{
+    background: white;
+}
+.footerpin{
+    background: white;
+    border-radius: 50%;
+}
+.footerin{
+    margin-left: 1rem;
+}
+.footerh6{
+    color: var(--ternary);
+    font-weight: 400;
+    font-size: 1rem;
+}
+.socialfooter{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: -1rem;
+}
+.socialfooter a{
+    margin-left: 1rem;
+} 
+footer img.logofooter{
+    margin-left: -1rem;
+}
+.socialfooter :nth-child(2){
+    margin-top: -3rem;
 }
