@@ -1,0 +1,76 @@
+body {
+  min-height: 95vh;
+  background: linear-gradient(to top, orange, orangered);
+  font-family: Poppins;
+  color: white;
+  text-align: center;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+input {
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  min-width: 30rem;
+  font-size: 1.5rem;
+  font-family: Poppins;
+  color: orangered;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+button {
+  margin-right: 2rem;
+  
+  font-size: 1.5rem;
+  font-family: Poppins;
+  color: white;
+  background: orangered;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  font-size: 1.75rem;
+}
+input:hover {
+  font-size: 1.75rem;
+}
+.checkinstant {
+  display: none;
+}
+.output {
+  display: none;
+}
+.red {
+  color: rgb(182, 0, 0);
+}
+.green {
+  color: rgb(45, 255, 45);
+  text-shadow: black;
+}
+.inv {
+  display: none;
+}
+.button2 {
+  padding: 1rem 3rem;
+  margin-left: 2rem;
+}
+.play{
+  position: absolute;
+  bottom: 20px;
+  right:0;
+  padding: 1rem 1rem;
+}
+.button{
+  padding: 1rem 3rem;
+}
+
