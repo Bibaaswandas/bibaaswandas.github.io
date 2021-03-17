@@ -315,7 +315,7 @@ function initNextQuestion() {
     question.innerText = questionNumber + ") " + "What is " + mx + " * " + my;
   } else if (questionHInt === 5) {
     question.innerText =
-      questionNumber + ") " + "What is " + my * x + " / " + my;
+      questionNumber + ") " + "What is " + my * x + " ÷ " + my;
   } else if (questionHInt === 6) {
     question.innerText =
       questionNumber + ") " + "Which is lesser " + sum + " or " + x;
