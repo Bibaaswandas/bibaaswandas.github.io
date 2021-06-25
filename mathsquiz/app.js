@@ -327,11 +327,11 @@ function initNextQuestion() {
     question.innerText =
       questionNumber +
       ") " +
-      "How many paise is " +
+      "How many cents is " +
       x +
-      " rupees and " +
+      " dollars and " +
       y +
-      " paise";
+      " cents";
   } else if (questionHInt === 10) {
     question.innerText = questionNumber + ") " + "Write a factor of " + x;
   }
