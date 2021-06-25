@@ -312,7 +312,7 @@ function initNextQuestion() {
   } else if (questionHInt === 3) {
     question.innerText = questionNumber + ") " + "What is " + sum + " - " + y;
   } else if (questionHInt === 4) {
-    question.innerText = questionNumber + ") " + "What is " + mx + " * " + my;
+    question.innerText = questionNumber + ") " + "What is " + mx + " x " + my;
   } else if (questionHInt === 5) {
     question.innerText =
       questionNumber + ") " + "What is " + my * x + " ÷ " + my;

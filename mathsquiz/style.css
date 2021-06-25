@@ -1,7 +1,7 @@
 body {
   min-height: 95vh;
   background: linear-gradient(to top, orange, orangered);
-  font-family: Poppins;
+  font-family: "Poppins";
   color: white;
   text-align: center;
 }
@@ -18,7 +18,7 @@ input {
   margin-bottom: 4rem;
   min-width: 30rem;
   font-size: 1.5rem;
-  font-family: Poppins;
+  font-family: "Poppins";
   color: orangered;
   outline: none;
   border: none;
@@ -29,7 +29,7 @@ button {
   margin-right: 2rem;
   
   font-size: 1.5rem;
-  font-family: Poppins;
+  font-family: "Poppins";
   color: white;
   background: orangered;
   border: none;
