@@ -48,135 +48,24 @@ function checkAnswer() {
   checkinstant.innerText = "submitispressed";
   output.innerText = document.getElementById("input").value;
 
-  //   if (questionHInt === 1) {
-  //       if(checkinstant.innerText === "submitispressed"){
-
-  //       }
-  //   }
-  //1,2,3,4,5,6,7,8,9,10
-
-  if (questionHInt === 10) {
+  if (questionHInt === 1) {
     if (checkinstant.innerText === "submitispressed") {
-      if (x % output.innerText == 0) {
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        ting.play();
-        score = score + 1;
-        scoretext.innerText = "Score: " + score;
-        console.log("YOu are correct");
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
+      if (output.innerText == sum) {
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score += 1;
+          scoretext.innerText = "Score: " + score;
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
       } else if (output.innerText > 0) {
         score = score - 1;
         scoretext.innerText = "Score: " + score;
         wrong.play();
         reply.classList.remove("green");
         reply.classList.add("red");
-        console.log("YOu are wrong");
-        reply.innerText = "You are Wrong";
-        output.innerText = "";
-      } else {
-        console.log("value is null");
-        output.innerText = "";
-      }
-    }
-  }
-  if (questionHInt === 9) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == x * 100 + y) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score = score + 1;
-        scoretext.innerText = "Score: " + score;
-        console.log("YOu are correct");
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
-      } else if (output.innerText > 0) {
-        wrong.play();
-        score = score - 1;
-        scoretext.innerText = "Score: " + score;
-        reply.classList.remove("green");
-        reply.classList.add("red");
-        console.log("YOu are wrong");
-        reply.innerText = "You are Wrong";
-        output.innerText = "";
-      } else {
-        console.log("value is null");
-        output.innerText = "";
-      }
-    }
-  }
-  if (questionHInt === 7) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == sum - x) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score = score + 1;
-        scoretext.innerText = "Score: " + score;
-        console.log("YOu are correct");
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
-      } else if (output.innerText > 0) {
-        score = score - 1;
-        scoretext.innerText = "Score: " + score;
-        wrong.play();
-        reply.classList.remove("green");
-        reply.classList.add("red");
-        console.log("YOu are wrong");
-        reply.innerText = "You are Wrong";
-        output.innerText = "";
-      } else {
-        console.log("value is null");
-        output.innerText = "";
-      }
-    }
-  }
-  if (questionHInt === 5) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == x) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score = score + 1;
-        scoretext.innerText = "Score: " + score;
-        console.log("YOu are correct");
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
-      } else if (output.innerText > 0) {
-        score = score - 1;
-        scoretext.innerText = "Score: " + score;
-        wrong.play();
-        reply.classList.remove("green");
-        reply.classList.add("red");
-        console.log("YOu are wrong");
-        reply.innerText = "You are Wrong";
-        output.innerText = "";
-      } else {
-        console.log("value is null");
-        output.innerText = "";
-      }
-    }
-  }
-  if (questionHInt === 4) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == mx * my) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score = score + 1;
-        scoretext.innerText = "Score: " + score;
-        console.log("YOu are correct");
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
-      } else if (output.innerText > 0) {
-        score = score - 1;
-        scoretext.innerText = "Score: " + score;
-        wrong.play();
-        reply.classList.remove("green");
-        reply.classList.add("red");
-        console.log("YOu are wrong");
         reply.innerText = "You are Wrong";
         output.innerText = "";
       } else {
@@ -189,14 +78,16 @@ function checkAnswer() {
   if (questionHInt === 2 || questionHInt === 8) {
     if (checkinstant.innerText === "submitispressed") {
       if (output.innerText == x + y) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score = score + 1;
-        scoretext.innerText = "Score: " + score;
-        console.log("YOu are correct");
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score = score + 1;
+          scoretext.innerText = "Score: " + score;
+          console.log("YOu are correct");
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
       } else if (output.innerText > 0) {
         score = score - 1;
         scoretext.innerText = "Score: " + score;
@@ -216,15 +107,17 @@ function checkAnswer() {
   if (questionHInt === 3) {
     if (checkinstant.innerText === "submitispressed") {
       if (output.innerText == sum - y) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score += 1;
-        scoretext.innerText = "Score: " + score;
-        console.log("YOu are correct");
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score += 1;
+          scoretext.innerText = "Score: " + score;
+          console.log("YOu are correct");
 
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
       } else if (output.innerText > 0) {
         score = score - 1;
         scoretext.innerText = "Score: " + score;
@@ -240,16 +133,77 @@ function checkAnswer() {
       }
     }
   }
-  if (questionHInt === 1) {
+
+  if (questionHInt === 4) {
     if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == sum) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score += 1;
+      if (output.innerText == mx * my) {
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score = score + 1;
+          scoretext.innerText = "Score: " + score;
+          console.log("YOu are correct");
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
+      } else if (output.innerText > 0) {
+        score = score - 1;
         scoretext.innerText = "Score: " + score;
-        reply.innerText = "You are Correct!";
+        wrong.play();
+        reply.classList.remove("green");
+        reply.classList.add("red");
+        console.log("YOu are wrong");
+        reply.innerText = "You are Wrong";
         output.innerText = "";
+      } else {
+        console.log("value is null");
+        output.innerText = "";
+      }
+    }
+  }
+
+  if (questionHInt === 5) {
+    if (checkinstant.innerText === "submitispressed") {
+      if (output.innerText == x) {
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score = score + 1;
+          scoretext.innerText = "Score: " + score;
+          console.log("YOu are correct");
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
+      } else if (output.innerText > 0) {
+        score = score - 1;
+        scoretext.innerText = "Score: " + score;
+        wrong.play();
+        reply.classList.remove("green");
+        reply.classList.add("red");
+        console.log("YOu are wrong");
+        reply.innerText = "You are Wrong";
+        output.innerText = "";
+      } else {
+        console.log("value is null");
+        output.innerText = "";
+      }
+    }
+  }
+
+  if (questionHInt === 6) {
+    if (checkinstant.innerText === "submitispressed") {
+      if (output.innerText == x) {
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score += 1;
+          scoretext.innerText = "Score: " + score;
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
       } else if (output.innerText > 0) {
         score = score - 1;
         scoretext.innerText = "Score: " + score;
@@ -264,22 +218,85 @@ function checkAnswer() {
       }
     }
   }
-  if (questionHInt === 6) {
+
+  if (questionHInt === 7) {
     if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == x) {
-        ting.play();
-        reply.classList.add("green");
-        reply.classList.remove("red");
-        score += 1;
-        scoretext.innerText = "Score: " + score;
-        reply.innerText = "You are Correct!";
-        output.innerText = "";
+      if (output.innerText == sum - x) {
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score = score + 1;
+          scoretext.innerText = "Score: " + score;
+          console.log("YOu are correct");
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
       } else if (output.innerText > 0) {
         score = score - 1;
         scoretext.innerText = "Score: " + score;
         wrong.play();
         reply.classList.remove("green");
         reply.classList.add("red");
+        console.log("YOu are wrong");
+        reply.innerText = "You are Wrong";
+        output.innerText = "";
+      } else {
+        console.log("value is null");
+        output.innerText = "";
+      }
+    }
+  }
+
+  if (questionHInt === 9) {
+    if (checkinstant.innerText === "submitispressed") {
+      if (output.innerText == x * 100 + y) {
+        if (score < questionNumber) {
+          ting.play();
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          score = score + 1;
+          scoretext.innerText = "Score: " + score;
+          console.log("YOu are correct");
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
+      } else if (output.innerText > 0) {
+        wrong.play();
+        score = score - 1;
+        scoretext.innerText = "Score: " + score;
+        reply.classList.remove("green");
+        reply.classList.add("red");
+        console.log("YOu are wrong");
+        reply.innerText = "You are Wrong";
+        output.innerText = "";
+      } else {
+        console.log("value is null");
+        output.innerText = "";
+      }
+    }
+  }
+
+  if (questionHInt === 10) {
+    if (checkinstant.innerText === "submitispressed") {
+      if (x % output.innerText == 0) {
+        if (score < questionNumber) {
+          reply.classList.add("green");
+          reply.classList.remove("red");
+          ting.play();
+          score = score + 1;
+          scoretext.innerText = "Score: " + score;
+          console.log("YOu are correct");
+          reply.innerText = "You are Correct!";
+          output.innerText = "";
+        }
+      } else if (output.innerText > 0) {
+        score = score - 1;
+        scoretext.innerText = "Score: " + score;
+        wrong.play();
+        reply.classList.remove("green");
+        reply.classList.add("red");
+        console.log("YOu are wrong");
         reply.innerText = "You are Wrong";
         output.innerText = "";
       } else {
