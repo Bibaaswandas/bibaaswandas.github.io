@@ -16,6 +16,8 @@ var ting = new Audio("ting.mp3");
 var wrong = new Audio("wrong.mp3");
 let mode = "easy";
 let modeButton = document.querySelector(".mode");
+let submitisPressedBool = false;
+let currentQuestionNumber;
 
 if (mode == "suicide") {
   modeButton.innerText = "Suicide";
@@ -78,10 +80,12 @@ function checkAnswer() {
   checkinstant.innerText = "submitispressed";
   output.innerText = document.getElementById("input").value;
 
-  if (questionHInt === 1) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == sum) {
-        if (score < questionNumber) {
+  console.log(submitisPressedBool, questionNumber, currentQuestionNumber);
+
+  if (submitisPressedBool == false && questionNumber != currentQuestionNumber) {
+    if (questionHInt === 1) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == sum) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -103,12 +107,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 2 || questionHInt === 8) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == x + y) {
-        if (score < questionNumber) {
+    if (questionHInt === 2 || questionHInt === 8) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == x + y) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -132,12 +134,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 3) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == sum - y) {
-        if (score < questionNumber) {
+    if (questionHInt === 3) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == sum - y) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -162,12 +162,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 4) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == mx * my) {
-        if (score < questionNumber) {
+    if (questionHInt === 4) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == mx * my) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -191,12 +189,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 5) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == x) {
-        if (score < questionNumber) {
+    if (questionHInt === 5) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == x) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -220,12 +216,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 6) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == x) {
-        if (score < questionNumber) {
+    if (questionHInt === 6) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == x) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -247,12 +241,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 7) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == sum - x) {
-        if (score < questionNumber) {
+    if (questionHInt === 7) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == sum - x) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -276,12 +268,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 9) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (output.innerText == x * 100 + y) {
-        if (score < questionNumber) {
+    if (questionHInt === 9) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (output.innerText == x * 100 + y) {
           ting.play();
           reply.classList.add("green");
           reply.classList.remove("red");
@@ -305,12 +295,10 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
-  }
 
-  if (questionHInt === 10) {
-    if (checkinstant.innerText === "submitispressed") {
-      if (x % output.innerText == 0) {
-        if (score < questionNumber) {
+    if (questionHInt === 10) {
+      if (checkinstant.innerText === "submitispressed") {
+        if (x % output.innerText == 0) {
           reply.classList.add("green");
           reply.classList.remove("red");
           ting.play();
@@ -334,6 +322,7 @@ function checkAnswer() {
         output.innerText = "";
       }
     }
+    submitisPressedBool = true;
   }
 }
 
@@ -344,8 +333,10 @@ function initNextQuestion() {
   button2.innerText = "Submit Answer";
   output.innerText = document.getElementById("input").value;
   button.innerText = "Next Question >";
+  currentQuestionNumber = questionNumber;
   questionNumber += 1;
   questionHInt = Math.round(Math.random(1, 5) * 10);
+  submitisPressedBool = false;
   if (mode == "suicide") {
     x = Math.round(Math.random() * 100000);
     y = Math.round(Math.random() * 100000);
