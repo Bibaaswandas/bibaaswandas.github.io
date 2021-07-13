@@ -3,7 +3,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   min-height: 100vh;
-  background: linear-gradient(to top, orange, orangered);
+  background: linear-gradient(to top, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 1)), url(https://media.istockphoto.com/vectors/illustration-about-mathematics-vector-id1141668764?k=6&m=1141668764&s=612x612&w=0&h=HwOXfSTo2u6DFbq0ZYhs6dOZhVUoE9Gs5BybGJwK2Xg=);
+
   font-family: "Poppins";
   color: white;
   text-align: center;
