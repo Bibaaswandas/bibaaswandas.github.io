@@ -1,5 +1,8 @@
 body {
-  min-height: 95vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
   background: linear-gradient(to top, orange, orangered);
   font-family: "Poppins";
   color: white;
@@ -12,7 +15,7 @@ body {
   background: linear-gradient(to bottom, orangered, orange);
 }
 ::-webkit-scrollbar-thumb {
-  background: #ff3400;
+  background: #f01c00;
   border-radius: 20px;
 }
 h1 {
@@ -82,4 +85,12 @@ input:hover {
 }
 .button {
   padding: 1rem 3rem;
+}
+.mode {
+  background: #f01c00;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
 }

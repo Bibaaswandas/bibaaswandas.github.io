@@ -14,11 +14,41 @@ var music = new Audio("music.mp3");
 let playtrue = false;
 var ting = new Audio("ting.mp3");
 var wrong = new Audio("wrong.mp3");
+let mode = "easy";
+let modeButton = document.querySelector(".mode");
+
+if (mode == "suicide") {
+  modeButton.innerText = "Suicide";
+} else if (mode == "hard") {
+  modeButton.innerText = "Hard";
+} else if (mode == "medium") {
+  modeButton.innerText = "Medium";
+} else if (mode == "easy") {
+  modeButton.innerText = "Easy";
+}
 
 button.addEventListener("click", initNextQuestion);
 button2.addEventListener("click", checkAnswer);
 play.addEventListener("click", playMusic);
 music.volume = 0.2;
+modeButton.addEventListener("click", changeMode);
+
+function changeMode() {
+  if (mode == "suicide") {
+    mode = "easy";
+    modeButton.innerText = "Easy";
+  } else if (mode == "easy") {
+    mode = "medium";
+    modeButton.innerText = "Medium";
+  } else if (mode == "medium") {
+    mode = "hard";
+    modeButton.innerText = "Hard";
+  } else if (mode == "hard") {
+    mode = "suicide";
+    modeButton.innerText = "Suicide";
+  }
+  initNextQuestion();
+}
 
 function playMusic() {
   music.play();
@@ -316,11 +346,35 @@ function initNextQuestion() {
   button.innerText = "Next Question >";
   questionNumber += 1;
   questionHInt = Math.round(Math.random(1, 5) * 10);
-  x = Math.round(Math.random() * 100);
-  y = Math.round(Math.random() * 100);
-  mx = Math.round(Math.random() * 1000);
-  my = Math.round(Math.random() * 10);
-  sum = x + y;
+  if (mode == "suicide") {
+    x = Math.round(Math.random() * 100000);
+    y = Math.round(Math.random() * 100000);
+    mx = Math.round(Math.random() * 1000000);
+    my = Math.round(Math.random() * 10000);
+    sum = x + y;
+    modeButton.innerText = "Suicide";
+  } else if (mode == "hard") {
+    x = Math.round(Math.random() * 10000);
+    y = Math.round(Math.random() * 10000);
+    mx = Math.round(Math.random() * 100000);
+    my = Math.round(Math.random() * 1000);
+    sum = x + y;
+    modeButton.innerText = "Hard";
+  } else if (mode == "medium") {
+    x = Math.round(Math.random() * 1000);
+    y = Math.round(Math.random() * 1000);
+    mx = Math.round(Math.random() * 10000);
+    my = Math.round(Math.random() * 100);
+    sum = x + y;
+    modeButton.innerText = "Medium";
+  } else if (mode == "easy") {
+    x = Math.round(Math.random() * 100);
+    y = Math.round(Math.random() * 100);
+    mx = Math.round(Math.random() * 1000);
+    my = Math.round(Math.random() * 10);
+    sum = x + y;
+    modeButton.innerText = "Easy";
+  }
   if (questionHInt === 1) {
     question.innerText =
       questionNumber + ") " + "Which is greater " + sum + " or " + y;
