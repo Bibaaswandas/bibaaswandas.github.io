@@ -1,10 +1,15 @@
 body {
+<<<<<<< HEAD
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   min-height: 100vh;
   background: linear-gradient(to top, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 1)), url(https://media.istockphoto.com/vectors/illustration-about-mathematics-vector-id1141668764?k=6&m=1141668764&s=612x612&w=0&h=HwOXfSTo2u6DFbq0ZYhs6dOZhVUoE9Gs5BybGJwK2Xg=);
 
+=======
+  min-height: 95vh;
+  background: linear-gradient(to top, orange, orangered);
+>>>>>>> parent of 4617e9c (Modes added)
   font-family: "Poppins";
   color: white;
   text-align: center;
@@ -16,7 +21,7 @@ body {
   background: linear-gradient(to bottom, orangered, orange);
 }
 ::-webkit-scrollbar-thumb {
-  background: #f01c00;
+  background: #ff3400;
   border-radius: 20px;
 }
 h1 {
@@ -86,12 +91,4 @@ input:hover {
 }
 .button {
   padding: 1rem 3rem;
-}
-.mode {
-  background: #f01c00;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 10px 15px;
-  cursor: pointer;
 }

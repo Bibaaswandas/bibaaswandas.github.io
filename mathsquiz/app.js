@@ -14,6 +14,7 @@ var music = new Audio("music.mp3");
 let playtrue = false;
 var ting = new Audio("ting.mp3");
 var wrong = new Audio("wrong.mp3");
+<<<<<<< HEAD
 let mode = "easy";
 let modeButton = document.querySelector(".mode");
 let submitisPressedBool = false;
@@ -28,29 +29,13 @@ if (mode == "suicide") {
 } else if (mode == "easy") {
   modeButton.innerText = "Easy";
 }
+=======
+>>>>>>> parent of 4617e9c (Modes added)
 
 button.addEventListener("click", initNextQuestion);
 button2.addEventListener("click", checkAnswer);
 play.addEventListener("click", playMusic);
 music.volume = 0.2;
-modeButton.addEventListener("click", changeMode);
-
-function changeMode() {
-  if (mode == "suicide") {
-    mode = "easy";
-    modeButton.innerText = "Easy";
-  } else if (mode == "easy") {
-    mode = "medium";
-    modeButton.innerText = "Medium";
-  } else if (mode == "medium") {
-    mode = "hard";
-    modeButton.innerText = "Hard";
-  } else if (mode == "hard") {
-    mode = "suicide";
-    modeButton.innerText = "Suicide";
-  }
-  initNextQuestion();
-}
 
 function playMusic() {
   music.play();
@@ -336,6 +321,7 @@ function initNextQuestion() {
   currentQuestionNumber = questionNumber;
   questionNumber += 1;
   questionHInt = Math.round(Math.random(1, 5) * 10);
+<<<<<<< HEAD
   submitisPressedBool = false;
   if (mode == "suicide") {
     x = Math.round(Math.random() * 100000);
@@ -366,6 +352,13 @@ function initNextQuestion() {
     sum = x + y;
     modeButton.innerText = "Easy";
   }
+=======
+  x = Math.round(Math.random() * 100);
+  y = Math.round(Math.random() * 100);
+  mx = Math.round(Math.random() * 1000);
+  my = Math.round(Math.random() * 10);
+  sum = x + y;
+>>>>>>> parent of 4617e9c (Modes added)
   if (questionHInt === 1) {
     question.innerText =
       questionNumber + ") " + "Which is greater " + sum + " or " + y;
